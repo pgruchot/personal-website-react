@@ -1,0 +1,28 @@
+@import "fonts";
+@import "themes";
+@import "mediaQueries";
+
+:root {
+  --firstColor: #5de8e5;
+  --secondColor: #333333;
+  --thirdColor: #fcfaf9;
+  --fourthColor: #f3d3bd;
+  --fifthColor: #5e5e5e;
+  --sixthColor: #d3d0cb;
+  --changeColor1: #5de8e5;
+  --changeColor2: #f44d9b;
+  --changeColor3: #e9275b;
+  --changeColor4: #392270;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  position: relative;
+}

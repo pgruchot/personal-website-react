@@ -1,8 +1,12 @@
 import React from "react";
-import "./App.scss";
-
+import "./global-styles/index.scss";
+import Home from "./scenes/home";
 function App() {
-  return <div className="container">App</div>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
