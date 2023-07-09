@@ -1,9 +1,12 @@
 {
-  "name": "personal",
+  "name": "pgruchot-personal-website",
   "version": "1.0.0",
-  "description": "",
+  "homepage": "https://pgruchot.github.io/pgruchot.github.io.git",
+  "description": "Personal website project done in React.",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
     "start": "webpack-dev-server .",
     "build": "webpack ."
   },
@@ -17,6 +20,7 @@
     "@babel/preset-react": "^7.22.5",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
     "node-sass": "^9.0.0",
     "sass": "^1.63.6",
