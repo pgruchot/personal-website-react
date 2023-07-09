@@ -46,7 +46,7 @@ function Animation() {
       window.removeEventListener("touchstart", onDocumentTouchStart);
       window.removeEventListener("touchmove", onDocumentTouchMove);
     };
-  }, []);
+  }, [color]);
   // COLORS
   let firstColor = 0xf3d3bd; // cold
   let fifthColor = 0x5e5e5e; // light gray
