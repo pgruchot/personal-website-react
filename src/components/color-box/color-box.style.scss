@@ -34,3 +34,12 @@
   width: 100%;
   background-color: var(--firstColor);
 }
+@media only screen and (max-width: 800px) {
+  .color-box {
+    top: 80%;
+    left: 90%;
+    transform: translate(-90%, -80%);
+    width: 20px;
+    height: 130px;
+  }
+}

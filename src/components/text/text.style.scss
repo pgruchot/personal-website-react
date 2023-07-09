@@ -46,6 +46,7 @@
         font-size: 42px;
         margin-top: 10px;
         transition: 1s;
+        word-wrap: break-word;
         &:hover {
           background-color: var(--fourthColor);
           color: var(--secondColor);
@@ -78,5 +79,59 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text-container {
+    h1 {
+      font-size: 80px;
+    }
+    .text-h1-upper {
+      top: 40%;
+    }
+    .text-h1-lower {
+      top: 50%;
+    }
+    .text-h1-lower span {
+      font-size: 100px;
+    }
+    p {
+      width: 80%;
+      font-size: 28px;
+    }
+    p {
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .text-container {
+    p {
+      font-size: 26px;
+      span {
+        font-size: 26px;
+      }
+    }
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+  .text-h1-lower {
+    span {
+      font-size: 140px;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .text-container {
+    p {
+      font-size: 35px;
+    }
+  }
+  p span {
+    font-size: 36px;
   }
 }

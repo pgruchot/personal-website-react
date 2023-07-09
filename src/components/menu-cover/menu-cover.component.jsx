@@ -1,11 +1,10 @@
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./menu-cover.style.scss";
 function MenuCover({ isMenuOpen }) {
   const tilesRef = useRef();
   useEffect(() => {
     if (isMenuOpen) {
-      console.log(tilesRef.current.children[0].classList);
       for (let i = 0; i < tilesRef.current.children.length; i++) {
         setTimeout(
           () =>

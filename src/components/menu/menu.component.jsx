@@ -22,14 +22,17 @@ function Menu() {
       }
     } else {
       for (let i = 0; i < menuRef.current.children.length + 1; i++) {
-        setTimeout(() => {
-          if (i < menuRef.current.children.length)
-            menuRef.current.children[i].classList.remove("menu-link-active");
-          else {
-            menuRef.current.classList.add("disabled");
-            setMenuInProgress(false);
-          }
-        }, i * 200);
+        setTimeout(
+          () => {
+            if (i < menuRef.current.children.length)
+              menuRef.current.children[i].classList.remove("menu-link-active");
+            else {
+              menuRef.current.classList.add("disabled");
+              setMenuInProgress(false);
+            }
+          },
+          i < menuRef.current.children.length ? i * 200 : i * 400 //longer timeout allows the animation to finish
+        );
       }
     }
   }, [isMenuOpen]);

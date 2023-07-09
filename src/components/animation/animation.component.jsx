@@ -56,13 +56,10 @@ function Animation() {
   // MAIN OBJECT -> DEER
   const Deer = () => {
     const material = new THREE.MeshPhongMaterial({ color: firstColor });
-    const obj = useLoader(OBJLoader, "deer.obj", (loader) => {
-      console.log(loader);
-    });
+    const obj = useLoader(OBJLoader, "deer.obj", (loader) => {});
     obj.traverse((child) => {
       if (child instanceof Mesh) {
         child.material = material;
-        console.log(child.material);
       }
     });
     return (

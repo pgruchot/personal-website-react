@@ -52,3 +52,14 @@
   top: 14px;
   transform: translateY(-14px) rotate(-45deg);
 }
+@media only screen and (max-width: 800px) {
+  .menu-button-container {
+    width: 44px;
+    height: 44px;
+    position: fixed;
+    left: 10%;
+    top: 20%;
+    transform: translate(-10%, -20%);
+    transition: display 0.5s;
+  }
+}
