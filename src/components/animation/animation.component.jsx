@@ -1,5 +1,6 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
+import { PageContext } from "../../contexts/pageContext/page.context";
 import "./animation.style.scss";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
@@ -7,6 +8,7 @@ import * as THREE from "three";
 import { Mesh } from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 function Animation() {
+  const { color } = useContext(PageContext);
   // WINDOW EVENETS, MOUSE COORDINATES
   let mouse = new THREE.Vector2(),
     INTERSECTED;
@@ -104,8 +106,8 @@ function Animation() {
   // ANIMATE
   const Animate = () => {
     useFrame((state) => {
-      state.scene.background = new THREE.Color(0x5de8e5);
-      state.scene.fog = new THREE.FogExp2(0x5de8e5, 0.15);
+      state.scene.background = new THREE.Color(color);
+      state.scene.fog = new THREE.FogExp2(color, 0.15);
       state.scene.rotation.y -=
         (mouse.x * 8 - state.camera.rotation.y) * cameraModifier;
       state.scene.rotation.x -=

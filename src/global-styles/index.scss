@@ -1,5 +1,4 @@
 @import "fonts";
-@import "themes";
 @import "mediaQueries";
 
 :root {
@@ -26,8 +25,13 @@ body {
   height: 100%;
   position: relative;
 }
-
 #root {
   height: 100%;
   width: 100%;
+}
+.disabled {
+  display: none;
+}
+.active {
+  display: flex;
 }
